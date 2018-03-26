@@ -9,29 +9,29 @@ class Account
   def initialize
     @balance = 0
     @date = DateTime.now.strftime("%d/%m/%Y")
-    @statement = []
+    @statement = [["date || credit || debit || balance"]]
   end
 
   def deposit(amount)
-    add(balance, amount)
+    add(amount)
     dep_statement(amount)
   end
 
   def withdraw(amount)
-    deduct(balance, amount)
+    deduct(amount)
     with_statement(amount)
   end
 
   def dep_statement(amount)
-    @statement.push([@date, '', amount, @balance])
+    @statement.push(["#{@date}, '', #{amount}, #{@balance}"])
   end
 
   def with_statement(amount)
-    @statement.push([@date, amount, '', @balance])
+    @statement.push(["#{@date}, #{amount}, '', #{@balance}"])
   end
 
   def print_statement
-    @statement
+    array = @statement
+    array.each { |x| puts x }
   end
-
 end

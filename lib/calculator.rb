@@ -2,11 +2,11 @@ require 'account'
 
 module Calculator
 
-  def deduct(balance, amount)
+  def deduct(amount)
     @balance -= amount
   end
 
-  def add (balance, amount)
+  def add(amount)
     @balance += amount
   end
 
