@@ -16,6 +16,10 @@ describe Account do
     it 'initializes the date as the current date' do
       expect(account.date).to eq(date)
     end
+
+    it 'initalizes an empty array' do
+      expect(account.statement).to eq([])
+    end
   end
 
   describe 'depositing money' do
@@ -32,5 +36,7 @@ describe Account do
       expect(account.balance).to eq(10)
     end
   end
+
+
 
 end
