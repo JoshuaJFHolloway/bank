@@ -1,7 +1,9 @@
-class Calculator
+require 'account'
 
-  def withdraw
+module Calculator
 
+  def deduct(balance, amount)
+    @balance -= amount
   end
 
 end

@@ -1,6 +1,9 @@
 require 'date'
+require 'calculator'
 
 class Account
+
+  include Calculator
 
   def initialize
     @balance = 0
@@ -18,5 +21,10 @@ class Account
   def deposit(amount)
     @balance += amount
   end
+
+  def withdraw(amount)
+    deduct(balance, amount)
+  end
+
 
 end
