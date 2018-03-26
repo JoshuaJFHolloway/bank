@@ -1,4 +1,4 @@
-class Withdraw
+class Calculator
 
   def withdraw
 
