@@ -3,23 +3,16 @@ require 'calculator'
 
 class Account
 
+  attr_accessor :balance, :date
   include Calculator
 
   def initialize
     @balance = 0
-    @date = date
-  end
-
-  def balance
-    @balance
-  end
-
-  def date
-    date = DateTime.now.strftime("%d/%m/%Y")
+    @date = DateTime.now.strftime("%d/%m/%Y")
   end
 
   def deposit(amount)
-    @balance += amount
+    add(balance, amount)
   end
 
   def withdraw(amount)

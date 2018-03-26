@@ -6,4 +6,8 @@ module Calculator
     @balance -= amount
   end
 
+  def add (balance, amount)
+    @balance += amount
+  end
+
 end

@@ -21,11 +21,11 @@ Account statement (date, amount, balance) printing.
 Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 
-Deposit - Account
-Withdraw - Calculator
+Deposit - Account (done)
+Withdraw - Calculator (done)
 Statement - Printer
-Date - Account
-Balance - Account
+Date - Account (done)
+Balance - Account (done)
 
 
 
