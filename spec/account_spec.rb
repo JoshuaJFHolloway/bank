@@ -58,7 +58,6 @@ describe Account do
         expect(account.print_statement).to eq [["date || credit || debit || balance"], ["26/03/2018, 20, '', -20"]]
       end
     end
-  end
     context 'depositing then withdrawing' do
       it 'prints out two statements with full detail (date, credit, debit, balance)' do
         account.deposit(50)
@@ -66,4 +65,5 @@ describe Account do
         expect(account.print_statement).to eq [["date || credit || debit || balance"], ["26/03/2018, '', 50, 50"], ["26/03/2018, 20, '', 30"]]
       end
     end
+  end
 end
