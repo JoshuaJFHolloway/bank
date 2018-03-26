@@ -37,6 +37,12 @@ describe Account do
     end
   end
 
+  describe 'print statement' do
+    it 'prints out the statement will full detail (date, credit, debit, balance' do
+      account.deposit(30)
+      expect(account.print_statement).to eq [["26/03/2018", '', 30, 30]]
+    end
+  end
 
 
 end
