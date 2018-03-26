@@ -10,6 +10,10 @@ and statement.
 2. Use in IRB
 
 
+## How to run tests
+
+Simple run 'rspec' in the terminal
+
 ## Requirements
 
 Deposits, withdrawal.
