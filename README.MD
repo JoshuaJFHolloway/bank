@@ -1,6 +1,7 @@
 # Bank App
 
-
+A simple Bank app that allows the user to deposit, withdraw and see their bank balance
+and statement.
 
 
 ## How to use
