@@ -1,4 +1,4 @@
-class Bank
+class Account
 
   def balance
 

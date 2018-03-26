@@ -1,6 +1,6 @@
-require 'bank'
+require 'account'
 
-describe Bank do
+describe Account do
 
   it {is_expected.to respond_to :balance}
 
