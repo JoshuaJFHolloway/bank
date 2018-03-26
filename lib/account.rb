@@ -1,13 +1,22 @@
+require 'date'
+
 class Account
 
   def initialize
-    @balance = balance
+    @balance = 0
+    @date = date
   end
 
   def balance
-    balance = 0
+    @balance
   end
 
+  def date
+    date = DateTime.now.strftime("%d/%m/%Y")
+  end
 
+  def deposit(amount)
+    @balance += amount
+  end
 
 end
