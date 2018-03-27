@@ -4,9 +4,9 @@ describe Account do
 
   # it {is_expected.to respond_to :balance}
 
-  let(:account) { described_class.new} # mock the account so you use 'account' and not subject
-  let(:date) {DateTime.now.strftime("%d/%m/%Y")}
-  let(:calculator) {Calculator.new}
+  let(:account) { described_class.new } # mock the account so you use 'account' and not subject
+  let(:date) { DateTime.now.strftime("%d/%m/%Y") }
+  let(:calculator) { Calculator.new }
 
   describe '#initialize' do
     it 'initializes balance as 0' do
@@ -48,21 +48,21 @@ describe Account do
     context 'depositing' do
       it 'prints out the statement with full detail (date, credit, debit, balance)' do
         account.deposit(30)
-        expect(account.print_statement).to eq [["date || credit || debit || balance"], ["26/03/2018, '', 30, 30"]]
+        expect(account.print_statement).to eq [["date || credit || debit || balance"], ["27/03/2018, '', 30, 30"]]
       end
     end
 
     context 'withdrawing' do
       it 'prints out the statement with full detail (date, credit, debit, balance)' do
         account.withdraw(20)
-        expect(account.print_statement).to eq [["date || credit || debit || balance"], ["26/03/2018, 20, '', -20"]]
+        expect(account.print_statement).to eq [["date || credit || debit || balance"], ["27/03/2018, 20, '', -20"]]
       end
     end
     context 'depositing then withdrawing' do
       it 'prints out two statements with full detail (date, credit, debit, balance)' do
         account.deposit(50)
         account.withdraw(20)
-        expect(account.print_statement).to eq [["date || credit || debit || balance"], ["26/03/2018, '', 50, 50"], ["26/03/2018, 20, '', 30"]]
+        expect(account.print_statement).to eq [["date || credit || debit || balance"], ["27/03/2018, '', 50, 50"], ["27/03/2018, 20, '', 30"]]
       end
     end
   end
