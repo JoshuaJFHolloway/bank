@@ -1,5 +1,3 @@
-require 'account'
-
 module Calculator
 
   def add(amount)

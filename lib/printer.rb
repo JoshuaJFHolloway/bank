@@ -1,6 +1,3 @@
-require 'account'
-require 'calculator'
-
 module Printer
 
   def dep_statement(amount, balance, date)
