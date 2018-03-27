@@ -25,7 +25,7 @@ describe Account do
     #   expect(DateTime.now.strftime).to eq(2010)
     # end
 
-    it 'initalizes an empty array' do
+    it 'initalizes an array with the statement format in it' do
       expect(account.statement).to eq([[statement_format]])
     end
   end
@@ -49,21 +49,21 @@ describe Account do
     context 'depositing' do
       it 'prints out the statement with full detail (date, credit, debit, balance)' do
         account.deposit(30)
-        expect(account.print_statement).to eq [[statement_format], ["#{date}, '', 30, 30"]]
+        expect(account.print_statement).to eq [[statement_format], ["#{date} || || 30 || 30"]]
       end
     end
 
     context 'withdrawing' do
       it 'prints out the statement with full detail (date, credit, debit, balance)' do
         account.withdraw(20)
-        expect(account.print_statement).to eq [[statement_format], ["#{date}, 20, '', -20"]]
+        expect(account.print_statement).to eq [[statement_format], ["#{date} || 20 || || -20"]]
       end
     end
     context 'depositing then withdrawing' do
       it 'prints out two statements with full detail (date, credit, debit, balance)' do
         account.deposit(50)
         account.withdraw(20)
-        expect(account.print_statement).to eq [[statement_format], ["#{date}, '', 50, 50"], ["#{date}, 20, '', 30"]]
+        expect(account.print_statement).to eq [[statement_format], ["#{date} || || 50 || 50"], ["#{date} || 20 || || 30"]]
       end
     end
   end
