@@ -24,16 +24,4 @@ class Account
     with_statement(amount, balance, date)
   end
 
-  # def dep_statement(amount)
-  #   @statement.push(["#{@date}, '', #{amount}, #{@balance}"])
-  # end
-  #
-  # def with_statement(amount)
-  #   @statement.push(["#{@date}, #{amount}, '', #{@balance}"])
-  # end
-
-  # def print_statement
-  #   array = @statement
-  #   array.each { |x| puts x }
-  # end
 end
